@@ -2,6 +2,7 @@
     GOOGLE FONTS
 */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
 
 /* 
     ROOT STYLES
@@ -15,10 +16,29 @@
     --red: #ff0000;
     --white: #ffffff;
 
-    --header-links: #000000;
-    --header-links-hover: #000000;
-    --footer-links: #000000;
-    --footer-links-hover: #000000;
+    --header-bg-color: var(--white);
+    --header-border-color: var(--gray);
+    --header-links: var(--black);
+    --header-links-hover: var(--black);
+    --header-links-border: var(--black);
+
+    --footer-bg-color: var(--white);
+    --footer-links: var(--black);
+    --footer-links-hover: var(--black);
+
+    --bg-page-color: var(--gray);
+
+    --btn-bg-color: var(--primary);
+    --btn-text-color: var(--white);
+    --btn-bg-color-hover: var(--hover);
+    --btn-text-color-hover: var(--white);
+
+    --carousel-title-color: var(--white);
+    --carousel-description-color: var(--white);
+    --carousel-item-bg-color: rgba(0,0,0,0.7);
+
+    --oswald: 'Oswald', sans-serif!important;
+
 }
 /* 
     GENERAL STYLES
@@ -28,23 +48,35 @@
     font-family: 'Roboto', sans-serif;
 }
 html,body{
-    background-color: var(--gray);
+    background-color: var(--bg-page-color);
+}
+.ce-headline {
+    color: var(--hover);
+    padding: 30px 0 0;
 }
 .btn {
-    background-color: var(--primary)!important;
-    color: var(--white)!important;
+    background-color: var(--btn-bg-color)!important;
+    color: var(--btn-text-color)!important;
     font-size: 15px;
     font-weight: bold;
     padding: 10px 25px;
     text-transform: uppercase;
 }
 .btn:hover {
-    background-color: var(--hover)!important;
-    color: var(--white)!important;
+    background-color: var(--btn-bg-color-hover)!important;
+    color: var(--btn-text-color-hover)!important;
 }
 .text-justify{
     text-align: justify;
 }
+.container {
+	max-width: 1500px!important;
+	width: 100%!important;
+}
+.oswald {
+    font-family: var(--oswald);
+}
+
 @media all and (max-width: 767px){
     .text-justify{
         text-align: left;
@@ -55,8 +87,8 @@ html,body{
     HEADER STYLES
 */
 header {
-    background-color: var(--white);
-    border-bottom: 2px solid var(--gray);
+    background-color: var(--header-bg-color);
+    border-bottom: 2px solid var(--header-border-color);
     padding: 15px 0;
 }
 .logo-header {
@@ -81,14 +113,118 @@ header {
 }
 .navigation-header ul > li > a:hover{
     color: var(--header-links-hover);
-    border-bottom: 2px solid var(--black);
+    border-bottom: 2px solid var(--header-links-border);
+}
+
+/* 
+    MAIN HOME PAGE
+*/
+main.home-page {
+    padding: 40px 0;
+}
+main.home-page .carousel-inner {
+    height: 380px;
+}
+main.home-page .carousel-item {
+    position: relative;
+}
+main.home-page .carousel-item::before {
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: var(--carousel-item-bg-color);
+}
+main.home-page .carousel-item .description-Item{
+    position: absolute;
+    padding: 0 120px;
+    top: 35%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 100%;
+    z-index: 1;
+}
+main.home-page .carousel-item h1{
+    color: var(--carousel-title-color);
+}
+main.home-page .carousel-item p{
+    color: var(--carousel-description-color);
+}
+main.home-page .carousel-item p.post-details{
+    font-size: 14px!important;
+    text-transform: capitalize;
+}
+main.home-page .carousel-item p.post-btn{
+    position: absolute;
+    text-align: right!important;
+    right: 140px;
+    bottom: -40px;
+    z-index: 2;
+}
+
+main.home-page .recent-posts{
+    background-color: var(--white);
+    border-top: 6px solid var(--primary);
+    margin-top: 30px;
+    padding: 40px 40px 40px 10px;
+}
+main.home-page .recent-posts article{
+    padding: 15px 0;
+}
+main.home-page .recent-posts article:first-of-type{
+    padding-top: 0;
+}
+main.home-page .recent-posts article:last-of-type{
+    padding-bottom: 0;
+}
+main.home-page .recent-posts article h3,main.home-page .recent-posts article h3 > a{
+    color: var(--black);
+}
+
+main.home-page .last-tech-talk-posts{
+    background-color: var(--secondary);
+    margin-top: 30px;
+    padding: 40px;
+}
+main.home-page .last-tech-talk-posts article h3,main.home-page .last-tech-talk-posts article h3 > a{
+    color: var(--white)
+}
+main.home-page .last-tech-talk-posts article p{
+    color: var(--white)
+}
+main.home-page .last-tech-talk-posts article a.btn-link{
+    color: var(--hover);
+    font-size: 24px;
+    font-weight: 300;
+}
+
+/* 
+    HOME PAGE AD
+*/
+.block-home-page{
+    background-color: var(--secondary);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 80px 40px;
+    text-align: center;
+}
+.block-home-page h1{
+    color: var(--white);
+    font-weight: bold;
+}
+.block-home-page a.btn{
+    font-size: 20px;
+    width: 100%;
 }
 
 /* 
     FOOTER STYLES
 */
 footer {
-    background-color: var(--white);
+    background-color: var(--footer-bg-color);
     padding: 60px 0 40px;
 }
 footer p{

@@ -1,5 +1,6 @@
 <?php
 
+// Function setup to activate supports in the theme
 function juanjimeneztj_setup() {
     load_theme_textdomain( "my_theme", TEMPLATEPATH . "/languages");
 
@@ -24,12 +25,25 @@ function juanjimeneztj_setup() {
 }
 add_action( 'after_setup_theme', 'juanjimeneztj_setup' );
 
+// Function to register stylesheets and javascripts
 function juanjimeneztj_cssjs() {
     wp_enqueue_style( 'chartexperts-style', get_template_directory_uri() . '/css/styles.css' );
     wp_enqueue_script( 'chartexperts-js', get_template_directory_uri() . '/js/scripts.js', array( 'jquery' ), '', true );
 }
 add_action( 'wp_enqueue_scripts', 'juanjimeneztj_cssjs' );
 
+// Function to register widgets spaces
+function juanjimeneztj_widgets_init() {
+    register_sidebar( array(
+        'name'          => 'Home Page widgets',
+        'id'            => 'home-page-widget',
+        'before_widget' => '<div class="chartexpert-home-widget">',
+        'after_widget'  => '</div>',
+    ) );
+}
+add_action( 'widgets_init', 'juanjimeneztj_widgets_init' );
+
+// Functions to custom options in the theme
 function juanjimeneztj_customize_register($wp_customize){
 
     $wp_customize->add_section('gsweb_juanjimeneztj_vip_btn', array(
