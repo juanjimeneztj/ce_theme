@@ -11,7 +11,13 @@
         while (have_posts()) : the_post();
 ?>
     <div class="block-title" style="background-image: url('<?=get_template_directory_uri()?>/images/bg_weekly.jpg');">
-        <h1 class="oswald text-uppercase"><?=the_title();?></h1>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h1 class="oswald text-uppercase"><?=the_title();?></h1>
+                </div>
+            </div>
+        </div>
     </div>
     <main class="archives single">
         <div class="container">

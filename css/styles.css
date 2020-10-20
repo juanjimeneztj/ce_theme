@@ -94,9 +94,49 @@ header {
 .logo-header {
     margin-top: -5px;
 }
+.mobile-mnu{
+    cursor: pointer;
+    display: none;
+    font-size: 24px;
+    padding: 10px 15px;
+    border-radius: 3px;
+}
+.mobile-mnu:hover{
+    color: var(--white)!important;
+    background: var(--hover)!important;
+}
+.mobile-mnu .fa-times{
+    display: none;
+    font-size: 30px;
+}
+.mobile-mnu.gsweb-active{
+    display: block;
+}
+.mobile-mnu.gsweb-active.gsweb-enabled .fa-times{
+    display: block;
+    margin: 0 auto;
+}
+.mobile-mnu.gsweb-active.gsweb-enabled .fa-bars{
+    display: none;
+}
 .navigation-header ul{
     padding: 15px 0;
     margin: 0!important;
+}
+.navigation-header.mnuMobile{
+    display: block!important;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 70%;
+    height: 100%;
+    max-height: 100%;
+    z-index: 8888;
+    background: var(--secondary);
+    transition: all ease-in-out 0.4s;
+}
+.navigation-header.mnuMobile.active{
+    left: 0;
 }
 .navigation-header ul > li {
     display: inline-block;
@@ -114,6 +154,48 @@ header {
 .navigation-header ul > li > a:hover{
     color: var(--header-links-hover);
     border-bottom: 2px solid var(--header-links-border);
+}
+
+.navigation-header.mnuMobile ul > li{
+    display: block;
+    padding: 10px 0;
+}
+.navigation-header.mnuMobile ul > li > a{
+    color: var(--white)
+}
+.navigation-header.mnuMobile ul > li > a:hover{
+    color: var(--white);
+    border-bottom: 2px solid var(--white);
+}
+
+@media all and (max-width: 1200px){
+    .navigation-header{
+        display: none!important;
+    }
+    .mobile-mnu{
+        display: block;
+    }
+}
+@media all and (max-width: 991px){
+    header .btn{
+        margin-top: 15px;
+    }
+}
+@media all and (max-width: 767px){
+    .logo-header{
+        text-align: center;
+    }
+    .mobile-mnu{
+        background: var(--primary);
+        color:var(--white);
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        border-radius: 0;
+        text-align: center!important;
+        z-index: 9999;
+    }
 }
 
 /* 
@@ -181,6 +263,43 @@ main.home-page .last-tech-talk-posts article a.btn-link{
     font-weight: 300;
 }
 
+@media all and (max-width: 767px){
+    main.home-page .carousel-item h1{
+        font-size: 20px;
+        text-align: center;
+    }
+    main.home-page .carousel-item p{
+        display: none;
+    }
+    main.home-page .carousel-item p.post-details,main.home-page .carousel-item p.post-btn{
+        display: block;
+        text-align: center;
+    }
+    main.home-page .carousel-inner {
+        height: 180px;
+    }
+    main.home-page .carousel-item .description-Item{
+        position: absolute;
+        padding: 0;
+        top: 15px;
+        left: 0;
+        width: 100%;
+        transform: translate(0);
+        z-index: 1;
+    }
+    main.home-page .carousel-item p.post-btn{
+        right: 50%;
+        bottom: -60px;
+        transform: translateX(50%);
+    }
+    main.home-page .carousel-item p.post-btn a{
+        font-size: 10px;
+    }
+    main.home-page .last-tech-talk-posts{
+        padding: 20px;
+    }
+}
+
 /* 
     HOME PAGE AD
 */
@@ -214,7 +333,7 @@ main.archives .sidebar{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 100px 100px;
+    padding: 100px 0;
 }
 .block-title h1{
     color: var(--primary);
@@ -240,6 +359,15 @@ main.archives .sidebar{
 }
 main.archives .recent-posts{
     padding: 40px;
+}
+
+@media all and (max-width: 767px){
+    .recent-posts,main.archives .recent-posts{
+        padding: 20px;
+    }
+    .recent-posts article img{
+        padding: 15px 0;
+    }
 }
 
 /* 

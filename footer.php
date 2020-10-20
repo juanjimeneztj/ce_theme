@@ -42,5 +42,6 @@
                 }
             });
         </script>
+        <script async src="<?=get_template_directory_uri()?>/js/menu.js"></script>
     </body>
 </html>

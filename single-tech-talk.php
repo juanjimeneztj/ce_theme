@@ -4,12 +4,18 @@
     get_header();
 ?>
     <div class="block-title" style="background-image: url('<?=get_template_directory_uri()?>/images/bg_tech.jpg');">
-        <h1 class="oswald text-uppercase">Tech Talk</h1>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h1 class="oswald text-uppercase">Tech Talk</h1>
+                </div>
+            </div>
+        </div>
     </div>
     <main class="archives single">
         <div class="container">
             <div class="row">
-                <div class="col-md-9">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-9">
                     <div class="recent-posts">
                         <div class="container-fluid">
                             <div class="row">
@@ -44,7 +50,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-3">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-3">
                     <aside class="sidebar">
                         <?php if ( is_active_sidebar( 'sidebar-tech-widget' ) ) : ?>
                             <div id="sidebar-tech-widget" class="primary-sidebar widget-area" role="complementary">

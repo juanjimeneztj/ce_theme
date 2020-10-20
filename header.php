@@ -35,7 +35,7 @@
 <header>
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-12 col-md-3 col-lg-3 col-lx-3">
+            <div class="col-12 col-md-4 col-lg-3 col-lx-3">
                     <div class="logo-header"><?=get_custom_logo()?></div>
             </div>
             <?php
@@ -44,7 +44,11 @@
                 
                 if($gsweb_juanjimeneztj_vip_btn):
             ?>
-                <div class="col col-md-6 col-lg-7 col-lx-7 d-flex justify-content-end">
+                <div class="col col-md-8 col-lg-7 col-lx-7 d-flex justify-content-end">
+                    <div class="mobile-mnu">
+                        <i class="fas fa-bars"></i>
+                        <i class="fas fa-times"></i>
+                    </div>
                     <div class="navigation-header d-flex align-middle">
                         <?php
                             wp_nav_menu( array(

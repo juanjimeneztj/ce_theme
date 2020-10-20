@@ -52,7 +52,7 @@ get_header();?>
 
     <div class="container">
         <div class="row">
-            <div class="col-12 col-sm-12 col-md-8 col-lg-7 col-lx-7">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-7 col-lx-7">
                 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                     <ol class="carousel-indicators">
                         <?=$carouselItemsCode?>
@@ -110,7 +110,7 @@ get_header();?>
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-sm-12 col-md-4 col-lg-5 col-lx-5">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-5 col-lx-5">
                 <?php if ( is_active_sidebar( 'home-page-widget' ) ) : ?>
                     <div id="home-page-widget" class="primary-sidebar widget-area" role="complementary">
                         <?php dynamic_sidebar( 'home-page-widget' ); ?>
