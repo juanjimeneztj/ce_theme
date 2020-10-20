@@ -3,10 +3,10 @@
 
     get_header();
 ?>
-    <div class="block-title" style="background-image: url('<?=get_template_directory_uri()?>/images/bg_weekly.jpg');">
-        <h1 class="oswald text-uppercase">Weekly Spotlight</h1>
+    <div class="block-title" style="background-image: url('<?=get_template_directory_uri()?>/images/bg_tech.jpg');">
+        <h1 class="oswald text-uppercase">Tech Talk</h1>
     </div>
-    <main class="archives single">
+    <main class="archives">
         <div class="container">
             <div class="row">
                 <div class="col-md-9">
@@ -20,15 +20,16 @@
                                     ?>
                                                 <article id="post-<?=the_ID();?>" <?=post_class();?>>
                                                     <div class="row">
-                                                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-lx-12">
-                                                            <h3 class="oswald text-uppercase"><?=the_title();?></h3>
-                                                            <p><small><?=get_the_author()?> | <?=get_the_date()?></small></p>
-                                                            
-                                                            <img src="<?=get_the_post_thumbnail_url()?>" class="img-fluid" alt="Responsive image">
+                                                        <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-lx-4">
+                                                            <a href="<?=get_the_permalink()?>">
+                                                                <img src="<?=get_the_post_thumbnail_url()?>" class="img-fluid" alt="Responsive image">
+                                                            </a>
                                                         </div>
-                                                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-lx-12">
+                                                        <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-lx-8">
+                                                            <h3 class="oswald text-uppercase"><a class="oswald text-uppercase" href="<?=get_the_permalink()?>"><?=the_title();?></a></h3>
+                                                            <p><small><?=get_the_author()?> | <?=get_the_date()?></small></p>
                                                             <div class="entry-content">
-                                                                <?=the_content();?>
+                                                                <?=the_excerpt();?>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -46,9 +47,9 @@
 
                 <div class="col-md-3">
                     <aside class="sidebar">
-                        <?php if ( is_active_sidebar( 'sidebar-weekly-widget' ) ) : ?>
-                            <div id="sidebar-weekly-widget" class="primary-sidebar widget-area" role="complementary">
-                                <?php dynamic_sidebar( 'sidebar-weekly-widget' ); ?>
+                        <?php if ( is_active_sidebar( 'sidebar-tech-widget' ) ) : ?>
+                            <div id="sidebar-tech-widget" class="primary-sidebar widget-area" role="complementary">
+                                <?php dynamic_sidebar( 'sidebar-tech-widget' ); ?>
                             </div>
                         <?php endif; ?>
                     </aside>

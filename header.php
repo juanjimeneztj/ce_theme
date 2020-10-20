@@ -58,7 +58,7 @@
                     <?php
                         if($gsweb_juanjimeneztj_vip_btn_url):
                     ?>
-                        <a href="<?=$gsweb_juanjimeneztj_vip_btn_url?>" class="btn"><?=$gsweb_juanjimeneztj_vip_btn?></a>
+                        <a href="<?=$gsweb_juanjimeneztj_vip_btn_url?>" class="btn w-100"><?=$gsweb_juanjimeneztj_vip_btn?></a>
                     <?php else: ?>
                         <a href="#" class="btn"><?=$gsweb_juanjimeneztj_vip_btn?></a>
                     <?php endif; ?>

@@ -12,13 +12,13 @@ endif;
 $catName = str_replace(" ","-",$cat[0]->cat_name);
 switch ($catName) {
     case 'weekly-spotlight':
-        include dirname( __FILE__ ) . '/single-weekly-spotlight.php';
+        include dirname( __FILE__ ) . '/archive-weekly-spotlight.php';
         break;
     case 'tech-talk':
-        include dirname( __FILE__ ) . '/single-tech-talk.php';
+        include dirname( __FILE__ ) . '/archive-tech-talk.php';
         break;
     default:
-        include dirname( __FILE__ ) . '/single-default.php';
+        include dirname( __FILE__ ) . '/archive-default.php';
         break;
 }
 

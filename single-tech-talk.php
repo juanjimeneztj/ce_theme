@@ -1,32 +1,62 @@
 <?php
-defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
+    defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
 
-get_header();
-
-if (have_posts()) :
-    while (have_posts()) : the_post();
+    get_header();
 ?>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-9">
-                <article id="post-<?php the_ID();?>" <?php post_class();?>>
-                    <h1><?php the_title();?></h1>
+    <div class="block-title" style="background-image: url('<?=get_template_directory_uri()?>/images/bg_tech.jpg');">
+        <h1 class="oswald text-uppercase">Tech Talk</h1>
+    </div>
+    <main class="archives single">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                    <div class="recent-posts">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col">
+                                    <?php 
+                                        if (have_posts()) :
+                                            while (have_posts()) : the_post();
+                                    ?>
+                                                <article id="post-<?=the_ID();?>" <?=post_class();?>>
+                                                    <div class="row">
+                                                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-lx-12">
+                                                            <h3 class="oswald text-uppercase"><?=the_title();?></h3>
+                                                            <p><small><?=get_the_author()?> | <?=get_the_date()?></small></p>
+                                                            
+                                                            <img src="<?=get_the_post_thumbnail_url()?>" class="img-fluid" alt="Responsive image">
+                                                        </div>
+                                                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-lx-12">
+                                                            <div class="entry-content">
+                                                                <?=the_content();?>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </article>
+                                    <?php 
+                                            endwhile;
+                                        endif;
+                                        wp_reset_postdata();
+                                    ?>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-                    <div class="entry-content">
-                        <?php the_content();?>
-                    </div><!-- entry-content -->
-                </article>
-            </div>
+                <div class="col-md-3">
+                    <aside class="sidebar">
+                        <?php if ( is_active_sidebar( 'sidebar-tech-widget' ) ) : ?>
+                            <div id="sidebar-tech-widget" class="primary-sidebar widget-area" role="complementary">
+                                <?php dynamic_sidebar( 'sidebar-tech-widget' ); ?>
+                            </div>
+                        <?php endif; ?>
+                    </aside>
+                </div>
+            </div><!-- row -->
+        </div><!-- container -->
+    </main>
+<?php
+    wp_reset_postdata();
 
-            <div class="col-md-3">
-                <aside class="sidebar">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas beatae dolor quam fuga magni, nemo mollitia dicta obcaecati cupiditate ad amet tempora quisquam omnis enim. Atque labore libero alias nobis.</p>
-                </aside>
-            </div>
-        </div><!-- row -->
-    </div><!-- container -->
-<?php 
-    endwhile;
-endif;
-
-get_footer();
+    get_footer();

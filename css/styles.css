@@ -164,25 +164,6 @@ main.home-page .carousel-item p.post-btn{
     z-index: 2;
 }
 
-main.home-page .recent-posts{
-    background-color: var(--white);
-    border-top: 6px solid var(--primary);
-    margin-top: 30px;
-    padding: 40px 40px 40px 10px;
-}
-main.home-page .recent-posts article{
-    padding: 15px 0;
-}
-main.home-page .recent-posts article:first-of-type{
-    padding-top: 0;
-}
-main.home-page .recent-posts article:last-of-type{
-    padding-bottom: 0;
-}
-main.home-page .recent-posts article h3,main.home-page .recent-posts article h3 > a{
-    color: var(--black);
-}
-
 main.home-page .last-tech-talk-posts{
     background-color: var(--secondary);
     margin-top: 30px;
@@ -218,6 +199,54 @@ main.home-page .last-tech-talk-posts article a.btn-link{
 .block-home-page a.btn{
     font-size: 20px;
     width: 100%;
+}
+
+/* 
+    ARCHIVES
+*/
+main.archives{
+    padding: 10px 0 40px;
+}
+main.archives .sidebar{
+    padding: 30px 0;
+}
+.block-title{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 100px 100px;
+}
+.block-title h1{
+    color: var(--primary);
+    font-size: 60px;
+}
+.recent-posts{
+    background-color: var(--white);
+    border-top: 6px solid var(--primary);
+    margin-top: 30px;
+    padding: 40px 40px 40px 10px;
+}
+.recent-posts article{
+    padding: 15px 0;
+}
+.recent-posts article:first-of-type{
+    padding-top: 0;
+}
+.recent-posts article:last-of-type{
+    padding-bottom: 0;
+}
+.recent-posts article h3,.recent-posts article h3 > a{
+    color: var(--black);
+}
+main.archives .recent-posts{
+    padding: 40px;
+}
+
+/* 
+    SINGLE
+*/
+main.single img{
+    padding-bottom: 30px;
 }
 
 /* 

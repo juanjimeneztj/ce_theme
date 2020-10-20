@@ -40,6 +40,24 @@ function juanjimeneztj_widgets_init() {
         'before_widget' => '<div class="chartexpert-home-widget">',
         'after_widget'  => '</div>',
     ) );
+    register_sidebar( array(
+        'name'          => 'Sidebar Tech widgets',
+        'id'            => 'sidebar-tech-widget',
+        'before_widget' => '<div class="chartexpert-sidebar-tech-widget">',
+        'after_widget'  => '</div>',
+    ) );
+    register_sidebar( array(
+        'name'          => 'Sidebar Weekly widgets',
+        'id'            => 'sidebar-weekly-widget',
+        'before_widget' => '<div class="chartexpert-sidebar-weekly-widget">',
+        'after_widget'  => '</div>',
+    ) );
+    register_sidebar( array(
+        'name'          => 'Sidebar Page widgets',
+        'id'            => 'sidebar-page-widget',
+        'before_widget' => '<div class="chartexpert-sidebar-page-widget">',
+        'after_widget'  => '</div>',
+    ) );
 }
 add_action( 'widgets_init', 'juanjimeneztj_widgets_init' );
 
