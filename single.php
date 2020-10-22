@@ -1,8 +1,6 @@
 <?php
 defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
 
-get_header();
-
 if (have_posts()) :
     while (have_posts()) : the_post();
         $cat = get_the_category(); 
@@ -12,14 +10,12 @@ endif;
 $catName = str_replace(" ","-",$cat[0]->cat_name);
 switch ($catName) {
     case 'weekly-spotlight':
-        include dirname( __FILE__ ) . '/single-weekly-spotlight.php';
+        get_template_part( 'template_parts/singles/single', $catName );
         break;
     case 'tech-talk':
-        include dirname( __FILE__ ) . '/single-tech-talk.php';
+        get_template_part( 'template_parts/singles/single', $catName );
         break;
     default:
-        include dirname( __FILE__ ) . '/single-default.php';
+        get_template_part( 'template_parts/singles/single', 'default' );
         break;
 }
-
-get_footer();
