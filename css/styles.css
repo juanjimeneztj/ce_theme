@@ -87,6 +87,9 @@ html,body{
     .text-justify{
         text-align: left;
     }
+    .tradingview-widget-container > iframe{
+        width: 115%!important;
+    }
 }
 
 /* 
