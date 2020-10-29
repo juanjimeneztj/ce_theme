@@ -50,6 +50,12 @@
 html,body{
     background-color: var(--bg-page-color);
 }
+.tradingview-widget-container{
+    overflow: hidden!important;
+}
+.tradingview-widget-container > iframe{
+    width: 105%!important;
+}
 .ce-headline {
     color: var(--hover);
     padding: 30px 0 0;
