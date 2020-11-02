@@ -54,6 +54,9 @@ html,body{
     color: var(--hover);
     padding: 30px 0 0;
 }
+.border-green-top{
+    border-top: 6px solid var(--primary)!important;
+}
 .btn {
     background-color: var(--btn-bg-color)!important;
     color: var(--btn-text-color)!important;
