@@ -7,7 +7,7 @@ if (have_posts()) :
     endwhile;
 endif;
 
-$catName = str_replace(" ","-",$cat[0]->cat_name);
+$catName = strtolower(str_replace(" ","-",$cat[0]->cat_name));
 switch ($catName) {
     case 'weekly-spotlight':
         get_template_part( 'template_parts/singles/single', $catName );

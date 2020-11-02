@@ -7,7 +7,7 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <h1 class="oswald text-uppercase">Weekly Spotlight</h1>
+                    <h1 class="oswald text-uppercase">Uncategorized</h1>
                 </div>
             </div>
         </div>
@@ -44,6 +44,9 @@
                                             endwhile;
                                         endif;
                                         wp_reset_postdata();
+
+                                        previous_posts_link();
+                                        next_posts_link();
                                     ?>
                                 </div>
                             </div>

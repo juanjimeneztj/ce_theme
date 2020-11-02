@@ -44,6 +44,9 @@
                                             endwhile;
                                         endif;
                                         wp_reset_postdata();
+
+                                        previous_posts_link();
+                                        next_posts_link();
                                     ?>
                                 </div>
                             </div>
