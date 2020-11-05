@@ -343,6 +343,9 @@ body.gsweb-hellobar-rogueinvesting-active{
     color: var(--gray);
     text-transform: capitalize;
 }
+body.single .recent-posts article .entry-content p{
+    margin-bottom: 20px!important;
+}
 
 @media all and (max-width: 767px){
     .recent-posts{
