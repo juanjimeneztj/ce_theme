@@ -49,10 +49,10 @@ $juanjimeneztj = new core_gsweb();
                 </div>
 
                 <?php $juanjimeneztj->aside_post_home([
-                    'title' => 'Title Here',
+                    'title' => 'Tech talk',
                     'posts_per_page' => 1,
                     'categories' => [
-                        'weekly-spotlight'
+                        'tech-talk'
                     ]
                 ]) ?>
             </div>

@@ -13,13 +13,13 @@ class core_gsweb{
     public static function vendorBS($type=null){
         if( $type !=  null ){
             if($type == 'css'){
-                if(file_exists($_SERVER['DOCUMENT_ROOT'].'/wp-content/themes/juanjimeneztj/vendor/twbs/bootstrap/dist/css/bootstrap.min.css')){
+                if(file_exists($_SERVER['DOCUMENT_ROOT'].'/wp-content/themes/chartexperts/vendor/twbs/bootstrap/dist/css/bootstrap.min.css')){
                     echo '<link rel="stylesheet" href="'.get_template_directory_uri().'/vendor/twbs/bootstrap/dist/css/bootstrap.min.css">';
                 }else{
                     echo '<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">';
                 }
             }else if($type == 'js'){
-                if(file_exists($_SERVER['DOCUMENT_ROOT'].'/wp-content/themes/juanjimeneztj/vendor/twbs/bootstrap/dist/js/bootstrap.min.js')){
+                if(file_exists($_SERVER['DOCUMENT_ROOT'].'/wp-content/themes/chartexperts/vendor/twbs/bootstrap/dist/js/bootstrap.min.js')){
                     echo '<script src="'.get_template_directory_uri().'/vendor/twbs/bootstrap/dist/js/bootstrap.min.js"></script>';
                 }else{
                     echo '<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script><script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>';
@@ -28,7 +28,7 @@ class core_gsweb{
                 echo 'Error sintaxis vendorBS function';
             }
         }else{
-            if(file_exists($_SERVER['DOCUMENT_ROOT'].'/wp-content/themes/juanjimeneztj/vendor/twbs/bootstrap/dist/css/bootstrap.min.css')){
+            if(file_exists($_SERVER['DOCUMENT_ROOT'].'/wp-content/themes/chartexperts/vendor/twbs/bootstrap/dist/css/bootstrap.min.css')){
                 echo '<link rel="stylesheet" href="'.get_template_directory_uri().'/vendor/twbs/bootstrap/dist/css/bootstrap.min.css">';
             }else{
                 echo '<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">';
@@ -39,13 +39,13 @@ class core_gsweb{
     public static function vendorFAW($type=null){
         if( $type !=  null ){
             if($type == 'css'){
-                if(file_exists($_SERVER['DOCUMENT_ROOT'].'/wp-content/themes/juanjimeneztj/vendor/fortawesome/font-awesome/css/all.min.css')){
+                if(file_exists($_SERVER['DOCUMENT_ROOT'].'/wp-content/themes/chartexperts/vendor/fortawesome/font-awesome/css/all.min.css')){
                     echo '<link rel="stylesheet" href="'.get_template_directory_uri().'/vendor/fortawesome/font-awesome/css/all.min.css">';
                 }else{
                     echo '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">';
                 }
             }else if($type == 'js'){
-                if(file_exists($_SERVER['DOCUMENT_ROOT'].'/wp-content/themes/juanjimeneztj/vendor/fortawesome/font-awesome/js/all.min.js')){
+                if(file_exists($_SERVER['DOCUMENT_ROOT'].'/wp-content/themes/chartexperts/vendor/fortawesome/font-awesome/js/all.min.js')){
                     echo '<script src="'.get_template_directory_uri().'/vendor/fortawesome/font-awesome/js/all.min.js"></script>';
                 }else{
                     echo '<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js"></script>';
@@ -54,7 +54,7 @@ class core_gsweb{
                 echo 'Error sintaxis vendorFAW function';
             }
         }else{
-            if(file_exists($_SERVER['DOCUMENT_ROOT'].'/wp-content/themes/juanjimeneztj/vendor/fortawesome/font-awesome/css/all.min.css')){
+            if(file_exists($_SERVER['DOCUMENT_ROOT'].'/wp-content/themes/chartexperts/vendor/fortawesome/font-awesome/css/all.min.css')){
                 echo '<link rel="stylesheet" href="'.get_template_directory_uri().'/vendor/fortawesome/font-awesome/css/all.min.css">';
             }else{
                 echo '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">';
