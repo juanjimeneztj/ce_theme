@@ -34,19 +34,14 @@ $juanjimeneztj = new core_gsweb();
                 </div>
             </div>
             <div class="col-12 col-sm-12 col-md-12 col-lg-5 col-lx-5">
+                <?php $juanjimeneztj->stock_home_widget_tv(); ?>
+                <?php $juanjimeneztj->stock_home_widget_market(); ?>
+
                 <?php if ( is_active_sidebar( 'home-page-widget' ) ) : ?>
                     <div id="home-page-widget" class="primary-sidebar widget-area" role="complementary">
                         <?php dynamic_sidebar( 'home-page-widget' ); ?>
                     </div>
                 <?php endif; ?>
-
-                <?php $juanjimeneztj->stock_home_widget_tv(); ?>
-                <?php $juanjimeneztj->stock_home_widget_market(); ?>
-
-                <div class="block-home-page mb-4">
-                    <h1 class="text-uppercase">Lorem Ipsum</h1>
-                    <a href="#" class="btn oswald text-uppercase">Get It Now</a>
-                </div>
 
                 <?php $juanjimeneztj->aside_post_home([
                     'title' => 'Tech talk',
