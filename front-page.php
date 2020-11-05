@@ -43,7 +43,7 @@ $juanjimeneztj = new core_gsweb();
                 <?php $juanjimeneztj->stock_home_widget_tv(); ?>
                 <?php $juanjimeneztj->stock_home_widget_market(); ?>
 
-                <div class="block-home-page mb-4" style="background-image: url('http://localhost/FinMC/2020/chartexperts/wordpress/wp-content/uploads/2020/10/bg3.png');">
+                <div class="block-home-page mb-4">
                     <h1 class="text-uppercase">Lorem Ipsum</h1>
                     <a href="#" class="btn oswald text-uppercase">Get It Now</a>
                 </div>
