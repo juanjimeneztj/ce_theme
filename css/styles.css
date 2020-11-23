@@ -335,7 +335,7 @@ body.gsweb-hellobar-rogueinvesting-active{
 .recent-posts article h3,.recent-posts article h3 > a{
     color: var(--black);
 }
-.recent-posts article p{
+body.home .recent-posts article p{
     margin: 0 auto!important;
 }
 .recent-posts article p.post-details{
